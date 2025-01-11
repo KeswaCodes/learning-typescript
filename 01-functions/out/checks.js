@@ -13,4 +13,3 @@ function isLetterInWord(character, listWord) {
     }
     return false;
 }
-console.log(isValidLength("io"));
