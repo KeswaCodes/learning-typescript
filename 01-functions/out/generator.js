@@ -36,7 +36,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs = __importStar(require("fs"));
 const csv_parse_1 = require("csv-parse");
 function getRandomWord() {
-    const fileContent = fs.readFileSync("src/words.csv", { encoding: 'utf-8' });
+    const fileContent = fs.readFileSync("src/words.csv", { encoding: 'utf-8' }); // soon to create function to read file, passing an argument to the function 
     let result = undefined;
     (0, csv_parse_1.parse)(fileContent, {
         delimiter: ','
@@ -44,12 +44,21 @@ function getRandomWord() {
         if (error) {
             console.error(error);
         }
-        console.log("Result ", word);
-        var myVar = Math.floor(Math.random() * (word.length - 0) + 0); // The maximum is inclusive and the minimum is inclusive
+        var myVar = Math.floor(Math.random() * (word.length - 0) + 0);
         var randomListWords = word.at(myVar);
-        console.log();
         result = randomListWords === null || randomListWords === void 0 ? void 0 : randomListWords.at(myVar == randomListWords.length ? 0 : myVar);
-        console.log("Hereeee " + result);
+        console.log("Here is the random word: " + result);
     });
 }
-getRandomWord();
+function hideLetters(chosenWord) {
+    var first = Math.floor(Math.random() * (chosenWord.length - 0) + 0);
+    // TODO: create function to make sure the numbers generated are not the same 
+    var second = Math.floor(Math.random() * (chosenWord.length - 0) + 0);
+    var result = [];
+    // TODO: create a function returning just the hidden word as a list
+    for (var i = 0; i < chosenWord.length; i++) {
+        i == first || second ? result.push(chosenWord.at(i) || " ") : result.push("__"); // this part hides the letter in the random index
+    }
+    return result;
+}
+console.log(hideLetters("Zee"));
