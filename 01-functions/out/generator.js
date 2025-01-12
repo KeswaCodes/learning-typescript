@@ -61,4 +61,3 @@ function hideLetters(chosenWord) {
     }
     return result;
 }
-console.log(hideLetters("Zee"));

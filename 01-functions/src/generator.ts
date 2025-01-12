@@ -36,7 +36,3 @@ function hideLetters(chosenWord : string): string[] {
     return result;
     
 }
-
-
-
-console.log(hideLetters("Zee"));
