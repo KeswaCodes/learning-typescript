@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 /**
  * This module deals with all the input & output operations of the game
  * welcomeUser() welcomes user to the game & introduces controls & rules

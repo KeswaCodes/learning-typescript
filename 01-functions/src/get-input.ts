@@ -18,3 +18,4 @@ function getUserInput() : string {
     let letter = prompt("What letter do you think is missing from the word?: ");
     return letter == null ? letter || " " : " ";
 }
+
