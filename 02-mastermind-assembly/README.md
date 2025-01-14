@@ -5,4 +5,5 @@
 ## Getting started 
 
 - Run the command `npm install` while in the current directory to install all project requirements from the package.json file.
+- Once all dependencies are installed, run the command `npm run start` to recompile to tsc files & run the server on the localhost. 
 

@@ -15,7 +15,7 @@
 
 
 async function welcomeUser(){
-    let listPhrases = ["Welcome to the Mastermind game...", "Here are the rules...", "Play well and enjoy! "];
+    let listPhrases = ["Here are the rules...", "Play well and enjoy! "];
     var element = document.getElementById("main-heading");
     for(let phrase of listPhrases) {
         console.log(phrase);

@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta user-scalable="no" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../styles/landing.css">
-    <script type="text/javascript" defer src="../out/get-input.js"></script>
-</head>
-<body>
-    <button onclick="welcomeUser()"> Click me! </button>
-    <h1 id="main-heading">Hi there Player 456! </h1>
+    <script defer src="../out/get-input.js"></script>
     
+</head>
+<body id="body">
+    <h1 id="main-heading">Welcome to the Mastermind game! </h1>
+    <button id="get-started-button" onclick="welcomeUser()"> Start </button>
+    
+    <script src="../out/server.js"></script>
 </body>
 </html>
