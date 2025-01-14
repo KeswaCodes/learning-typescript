@@ -15,7 +15,6 @@
 
 
 async function welcomeUser(){
-
     let listPhrases = ["Welcome to the Mastermind game...", "Here are the rules...", "Play well and enjoy! "];
     var element = document.getElementById("main-heading");
     for(let phrase of listPhrases) {
@@ -23,6 +22,7 @@ async function welcomeUser(){
         if(element) {element.textContent = phrase;}
         await sleep(2000);
     }
+    
 
 }
 
