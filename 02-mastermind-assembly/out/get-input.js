@@ -29,6 +29,9 @@ function welcomeUser() {
             }
             yield sleep(2000);
         }
+        // console.log(window.location.href);
+        yield sleep(2000);
+        window.location.href += "testing";
     });
 }
 function getUserInput() {
@@ -37,4 +40,11 @@ function getUserInput() {
 }
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+function createElement() {
+    const childElement = document.createElement("button");
+    const parentElement = document.getElementById("body");
+    childElement.textContent = "Bosso";
+    childElement.addEventListener("click", () => { console.log("You did it baby girl"); });
+    parentElement === null || parentElement === void 0 ? void 0 : parentElement.append(childElement);
 }

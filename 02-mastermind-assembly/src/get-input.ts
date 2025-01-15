@@ -22,6 +22,13 @@ async function welcomeUser(){
         if(element) {element.textContent = phrase;}
         await sleep(2000);
     }
+
+    // console.log(window.location.href);
+
+    await sleep(2000);
+    window.location.href += "testing";
+
+
     
 
 }
@@ -34,4 +41,17 @@ function getUserInput() : string {
 
 function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+function createElement(): void {
+
+    const childElement = document.createElement("button");
+    const parentElement = document.getElementById("body");
+    childElement.textContent = "Bosso";
+    childElement.addEventListener("click", () => {console.log("You did it baby girl");});
+    parentElement?.append(childElement);
+    
+    
+    
 }
